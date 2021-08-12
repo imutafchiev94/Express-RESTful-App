@@ -14,8 +14,10 @@ const routes = require('./routes');
 
 //const cors = require('./middlewares/cors');
 const cors = require('cors');
+const errirHandler = require('./middlewares/errorHandling');
 
 app.use(cors());
+app.use(errirHandler);
 
 app.use(express.json());
 
